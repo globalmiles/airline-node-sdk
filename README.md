@@ -111,7 +111,80 @@ const lib = require('lib');
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
+* [MembersController](#members_controller)
 * [FlightsController](#flights_controller)
+
+## <a name="members_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MembersController") MembersController
+
+### Get singleton instance
+
+The singleton instance of the ``` MembersController ``` class can be accessed from the API Client.
+
+```javascript
+var controller = lib.MembersController;
+```
+
+### <a name="create_recommend_a_new_member"></a>![Method: ](https://apidocs.io/img/method.png ".MembersController.createRecommendANewMember") createRecommendANewMember
+
+> This endpoint allows to recommend a new member to airlines.
+
+
+```javascript
+function createRecommendANewMember(body, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| body |  ``` Required ```  | The body of the request. |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var body = new NewMemberRequest({"key":"value"});
+
+    controller.createRecommendANewMember(body, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+### <a name="create_member_search"></a>![Method: ](https://apidocs.io/img/method.png ".MembersController.createMemberSearch") createMemberSearch
+
+> This endpoint allows to search a member on the airline system.
+
+
+```javascript
+function createMemberSearch(body, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| body |  ``` Required ```  | The body of the request. |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var body = new MemberSearchRequest({"key":"value"});
+
+    controller.createMemberSearch(body, function(error, response, context) {
+
+    
+    });
+```
+
+
+
+[Back to List of Controllers](#list_of_controllers)
 
 ## <a name="flights_controller"></a>![Class: ](https://apidocs.io/img/class.png ".FlightsController") FlightsController
 
@@ -123,54 +196,18 @@ The singleton instance of the ``` FlightsController ``` class can be accessed fr
 var controller = lib.FlightsController;
 ```
 
-### <a name="create_recommend_a_new_member"></a>![Method: ](https://apidocs.io/img/method.png ".FlightsController.createRecommendANewMember") createRecommendANewMember
-
-> This endpoint allows to recommend a new member to airlines.
-
-
-```javascript
-function createRecommendANewMember(accept, contentType, body, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
-| body |  ``` Required ```  | The body of the request. |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var accept = 'Accept';
-    var contentType = 'Content-Type';
-    var body = new NewMemberRequest({"key":"value"});
-
-    controller.createRecommendANewMember(accept, contentType, body, function(error, response, context) {
-
-    
-    });
-```
-
-
-
 ### <a name="create_flight_status"></a>![Method: ](https://apidocs.io/img/method.png ".FlightsController.createFlightStatus") createFlightStatus
 
 > This endpoint allows to search the status of flight.
 
 
 ```javascript
-function createFlightStatus(accept, contentType, body, callback)
+function createFlightStatus(body, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
 | body |  ``` Required ```  | The body of the request. |
 
 
@@ -179,11 +216,9 @@ function createFlightStatus(accept, contentType, body, callback)
 
 ```javascript
 
-    var accept = 'Accept';
-    var contentType = 'Content-Type';
     var body = new FlightStatusRequest({"key":"value"});
 
-    controller.createFlightStatus(accept, contentType, body, function(error, response, context) {
+    controller.createFlightStatus(body, function(error, response, context) {
 
     
     });
@@ -197,14 +232,12 @@ function createFlightStatus(accept, contentType, body, callback)
 
 
 ```javascript
-function createFlightCreation(accept, contentType, body, callback)
+function createFlightCreation(body, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
 | body |  ``` Required ```  | The body of the request. |
 
 
@@ -213,45 +246,9 @@ function createFlightCreation(accept, contentType, body, callback)
 
 ```javascript
 
-    var accept = 'Accept';
-    var contentType = 'Content-Type';
     var body = new FlightCreateRequest({"key":"value"});
 
-    controller.createFlightCreation(accept, contentType, body, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="create_member_search"></a>![Method: ](https://apidocs.io/img/method.png ".FlightsController.createMemberSearch") createMemberSearch
-
-> This endpoint allows to search a member on the airline system.
-
-
-```javascript
-function createMemberSearch(accept, contentType, body, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
-| body |  ``` Required ```  | The body of the request. |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var accept = 'Accept';
-    var contentType = 'Content-Type';
-    var body = new MemberSearchRequest({"key":"value"});
-
-    controller.createMemberSearch(accept, contentType, body, function(error, response, context) {
+    controller.createFlightCreation(body, function(error, response, context) {
 
     
     });
